@@ -14,14 +14,14 @@ namespace DCTFun
         private static int size;
         static void Main(string[] args)
         {
-            if (Debugger.IsAttached)
-                args = new[] {"test.png"};
+            args = new[] { "test.png" };
 
             if (args.Length == 0)
             {
                 Console.WriteLine("No image supplied. Drag an image onto DCTFun.exe.");
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
+                return;
             }
 
             Console.WriteLine("Input: {0}", args[0]);

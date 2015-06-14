@@ -59,19 +59,19 @@ namespace DCTLib
         //Run the DCT2D on 3-channeled group of matrices
         public void DCTMatrices(double[][,] matrices)
         {
-            for (int i = 0; i < 3; i++)
+            Parallel.For(0, 3, i =>
             {
                 matrices[i] = DCT2D(matrices[i]);
-            }
+            });
         }
 
         //Run the inverse DCT2D on 3-channeled group of matrices
         public void IDCTMatrices(double[][,] matrices)
         {
-            for (int i = 0; i < 3; i++)
+            Parallel.For(0, 3, i =>
             {
                 matrices[i] = IDCT2D(matrices[i]);
-            }
+            });
         }
 
         //Run a DCT2D on a single matrix
@@ -86,6 +86,8 @@ namespace DCTLib
                 {
                     //...sum the basisfunction for every [x,y] value in the bitmap input
                     double sum = 0d;
+
+                    
 
                     for (int x = 0; x < size; x++)
                     {
