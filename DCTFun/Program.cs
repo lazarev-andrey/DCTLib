@@ -17,6 +17,13 @@ namespace DCTFun
             if (Debugger.IsAttached)
                 args = new[] {"test.png"};
 
+            if (args.Length == 0)
+            {
+                Console.WriteLine("No image supplied. Drag an image onto DCTFun.exe.");
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+            }
+
             Console.WriteLine("Input: {0}", args[0]);
             Console.WriteLine("What size should the matrices be? Roughly 2-32. Larger numbers take longer.");
             Console.WriteLine("Best results are multiples of the input image's width and height.");
