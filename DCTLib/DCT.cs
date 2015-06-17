@@ -21,7 +21,6 @@ namespace DCTLib
         //Turn DCT matrices into an RGB bitmap for output
         public Bitmap MatricesToBitmap(double[][,] array)
         {
-            PrintMatrix(array[0]);
             Bitmap b = new Bitmap(size, size);
             for (int x = 0; x < size; x++)
             {
@@ -60,7 +59,6 @@ namespace DCTLib
                     matrices[2][x, y] = b.GetPixel(x, y).B - 128;
                 }
             }
-            PrintMatrix(matrices[0]);
             return matrices;
         }
 
@@ -105,7 +103,7 @@ namespace DCTLib
                             sum += BasisFunction(a, u, v, x, y);
                         }
                     }
-                    coeffs[u, v] = sum * 0.25d * alpha(u) * alpha(v);
+                    coeffs[u, v] = sum * (2d/size) * alpha(u) * alpha(v);
                 }
             }
             return coeffs;
@@ -133,7 +131,7 @@ namespace DCTLib
                         }
                     }
 
-                    output[x, y] = sum * 0.25d;
+                    output[x, y] = sum * (2d / size);
                 }
             }
             return output;
@@ -141,24 +139,10 @@ namespace DCTLib
 
         public double BasisFunction(double a, double u, double v, double x, double y)
         {
-            double b = Math.Cos(((2d * x + 1d) * u * Math.PI) / 16d);
-            double c = Math.Cos(((2d * y + 1d) * v * Math.PI) / 16d);
+            double b = Math.Cos(((2d * x + 1d) * u * Math.PI) / (2 * size));
+            double c = Math.Cos(((2d * y + 1d) * v * Math.PI) / (2 * size));
 
             return a * b * c;
-        }
-
-
-        private void PrintMatrix(double[,] matrix)
-        {
-            return;
-            for (int u = 0; u < size; u++)
-            {
-                for (int v = 0; v < size; v++)
-                {
-                    Console.Write(Math.Round(matrix[u, v], 2) + " ");
-                }
-                Console.WriteLine();
-            }
         }
 
         private double alpha(int u)
