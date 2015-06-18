@@ -11,10 +11,13 @@ namespace DCTFun
 {
     class Program
     {
-        private static int size;
         static void Main(string[] args)
         {
-            args = new[] { "test.png" };
+            int w;
+            int h;
+
+            if (Debugger.IsAttached)
+                args = new[] { "test.png" };
 
             if (args.Length == 0)
             {
@@ -25,13 +28,9 @@ namespace DCTFun
             }
 
             Console.WriteLine("Input: {0}", args[0]);
-            Console.WriteLine("What size should the matrices be? Roughly 2-32. Larger numbers take longer.");
-            Console.WriteLine("Best results are multiples of the input image's width and height.");
-
-            while (!int.TryParse(Console.ReadLine(), out size))
-            {
-                Console.WriteLine("Input should be a whole positive number.");
-            }
+            Console.WriteLine("What width should the matrices be? Roughly 2-32. Larger numbers take longer.");
+            ReadInt(out w);
+            ReadInt(out h);
 
             Console.WriteLine("Starting...");
             Stopwatch s = new Stopwatch();
@@ -49,18 +48,18 @@ namespace DCTFun
             Graphics coeffGraphics = Graphics.FromImage(coeffBitmap);
 
             //instance of dct we will use
-            DCT d = new DCT(size);
+            DCT d = new DCT(w, h);
 
-            for (int y = 0; y < height / size; y++)
+            for (int y = 0; y < height / h; y++)
             {
-                for (int x = 0; x < width / size; x++)
+                for (int x = 0; x < width / w; x++)
                 {
-                    Bitmap sector = new Bitmap(size, size);
+                    Bitmap sector = new Bitmap(w, h);
                     Graphics g = Graphics.FromImage(sector);
 
                     //where bitmap data will be copied
-                    Rectangle dest = new Rectangle(0, 0, size, size);
-                    Rectangle src = new Rectangle(x * size, y * size, size, size);
+                    Rectangle dest = new Rectangle(0, 0, w, h);
+                    Rectangle src = new Rectangle(x * w, y * h, w, h);
 
                     g.DrawImage(bitmap, dest, src, GraphicsUnit.Pixel);
 
@@ -75,7 +74,7 @@ namespace DCTFun
 
 
                 }
-                Console.Write("\r{0} of {1}", y, height / size);
+                Console.Write("\r{0} of {1}", y, height / h);
             }
             Console.WriteLine();
             Console.WriteLine("{0} seconds elapsed. ", s.ElapsedMilliseconds / 1000);
@@ -89,6 +88,14 @@ namespace DCTFun
 
             Console.WriteLine("Complete. Press any key to exit.");
             Console.ReadKey();
+        }
+
+        private static void ReadInt(out int a)
+        {
+            while (!int.TryParse(Console.ReadLine(), out a))
+            {
+                Console.WriteLine("Input should be a whole number.");
+            }
         }
     }
 }
