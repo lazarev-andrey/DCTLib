@@ -21,26 +21,34 @@ namespace DCTLib
         public int Width;
         public int Height;
 
+        private const int normOffset = 128;
+
         //Turn DCT matrices into an RGB bitmap for output
-        public Bitmap MatricesToBitmap(double[][,] array)
+        public Bitmap MatricesToBitmap(double[][,] matrices, bool offset = true)
         {
-            Bitmap b = new Bitmap(Width, Height);
+            Bitmap bitmap = new Bitmap(Width, Height);
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    byte R = (byte)(normOut(array[0][x, y] + 128));
-                    byte G = (byte)(normOut(array[1][x, y] + 128));
-                    byte B = (byte)(normOut(array[2][x, y] + 128));
-                    b.SetPixel(x, y, Color.FromArgb(R, G, B));
+                    double r = matrices[0][x, y];
+                    double g = matrices[1][x, y];
+                    double b = matrices[2][x, y];
+
+                    byte R = (byte)(normOut(r, offset));
+                    byte G = (byte)(normOut(g, offset));
+                    byte B = (byte)(normOut(b, offset));
+                    bitmap.SetPixel(x, y, Color.FromArgb(R, G, B));
                 }
             }
-            return b;
+            return bitmap;
         }
 
-        private double normOut(double a)
+        private double normOut(double a, bool offset)
         {
-            return Math.Min(Math.Max(a, 0), 255);
+            double o = offset ? normOffset : 0d;
+
+            return Math.Min(Math.Max(a + o, 0), 255);
         }
 
         //Create matrices from an RGB bitmap
@@ -57,30 +65,34 @@ namespace DCTLib
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    matrices[0][x, y] = b.GetPixel(x, y).R - 128;
-                    matrices[1][x, y] = b.GetPixel(x, y).G - 128;
-                    matrices[2][x, y] = b.GetPixel(x, y).B - 128;
+                    matrices[0][x, y] = b.GetPixel(x, y).R - normOffset;
+                    matrices[1][x, y] = b.GetPixel(x, y).G - normOffset;
+                    matrices[2][x, y] = b.GetPixel(x, y).B - normOffset;
                 }
             }
             return matrices;
         }
 
         //Run the DCT2D on 3-channeled group of matrices
-        public void DCTMatrices(double[][,] matrices)
+        public double[][,] DCTMatrices(double[][,] matrices)
         {
+            var outMatrices = new double[3][,];
             Parallel.For(0, 3, i =>
             {
-                matrices[i] = DCT2D(matrices[i]);
+                outMatrices[i] = DCT2D(matrices[i]);
             });
+            return outMatrices;
         }
 
         //Run the inverse DCT2D on 3-channeled group of matrices
-        public void IDCTMatrices(double[][,] matrices)
+        public double[][,] IDCTMatrices(double[][,] matrices)
         {
+            var outMatrices = new double[3][,];
             Parallel.For(0, 3, i =>
             {
-                matrices[i] = IDCT2D(matrices[i]);
+                outMatrices[i] = IDCT2D(matrices[i]);
             });
+            return outMatrices;
         }
 
         //Run a DCT2D on a single matrix
@@ -157,7 +169,7 @@ namespace DCTLib
 
         private double beta()
         {
-            return (1d/Width + 1d/Height);
+            return (1d / Width + 1d / Height);
         }
 
     }

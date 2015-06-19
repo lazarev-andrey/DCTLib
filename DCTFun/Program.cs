@@ -30,6 +30,7 @@ namespace DCTFun
             Console.WriteLine("Input: {0}", args[0]);
             Console.WriteLine("What width should the matrices be? Roughly 2-32. Larger numbers take longer.");
             ReadInt(out w);
+            Console.WriteLine("What height?");
             ReadInt(out h);
 
             Console.WriteLine("Starting...");
@@ -63,14 +64,14 @@ namespace DCTFun
 
                     g.DrawImage(bitmap, dest, src, GraphicsUnit.Pixel);
 
-                    double[][,] coeffs = d.BitmapToMatrices(sector);
-                    d.DCTMatrices(coeffs);//Pass with DCT
+                    double[][,] values = d.BitmapToMatrices(sector);
+                    double[][,] coeffs = d.DCTMatrices(values);//Pass with DCT
 
-                    coeffGraphics.DrawImage(d.MatricesToBitmap((coeffs)), src, dest, GraphicsUnit.Pixel);//Draw the coefficient table
+                    coeffGraphics.DrawImage(d.MatricesToBitmap(coeffs,false), src, dest, GraphicsUnit.Pixel);//Draw the coefficient table
 
 
-                    d.IDCTMatrices(coeffs);//Pass with IDCT
-                    cycleGraphics.DrawImage(d.MatricesToBitmap(coeffs), src, dest, GraphicsUnit.Pixel);//Draw a returned cycle
+                    values = d.IDCTMatrices(coeffs);//Pass with IDCT
+                    cycleGraphics.DrawImage(d.MatricesToBitmap(values), src, dest, GraphicsUnit.Pixel);//Draw a returned cycle
 
 
                 }
