@@ -16,6 +16,7 @@ namespace DCTFun
             int w;
             int h;
 
+            //supply some dummy arguments when running from vs's debugger
             if (Debugger.IsAttached)
                 args = new[] { "test.png" };
 
@@ -67,7 +68,7 @@ namespace DCTFun
                     double[][,] values = d.BitmapToMatrices(sector);
                     double[][,] coeffs = d.DCTMatrices(values);//Pass with DCT
 
-                    coeffGraphics.DrawImage(d.MatricesToBitmap(coeffs,false), src, dest, GraphicsUnit.Pixel);//Draw the coefficient table
+                    coeffGraphics.DrawImage(d.MatricesToBitmap(coeffs, false), src, dest, GraphicsUnit.Pixel);//Draw the coefficient table
 
 
                     values = d.IDCTMatrices(coeffs);//Pass with IDCT
@@ -75,7 +76,7 @@ namespace DCTFun
 
 
                 }
-                Console.Write("\r{0} of {1}", y, height / h);
+                Console.Write("\r{0} of {1}", y + 1, height / h);
             }
             Console.WriteLine();
             Console.WriteLine("{0} seconds elapsed. ", s.ElapsedMilliseconds / 1000);

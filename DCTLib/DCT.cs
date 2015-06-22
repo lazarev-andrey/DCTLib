@@ -118,7 +118,7 @@ namespace DCTLib
                             sum += BasisFunction(a, u, v, x, y);
                         }
                     }
-                    coeffs[u, v] = sum * beta() * alpha(u) * alpha(v);
+                    coeffs[u, v] = sum * beta * alpha(u) * alpha(v);
                 }
             }
             return coeffs;
@@ -146,7 +146,7 @@ namespace DCTLib
                         }
                     }
 
-                    output[x, y] = sum * beta();
+                    output[x, y] = sum * beta;
                 }
             }
             return output;
@@ -160,6 +160,7 @@ namespace DCTLib
             return a * b * c;
         }
 
+        //return 1/sqrt(2) if u is not 0
         private double alpha(int u)
         {
             if (u == 0)
@@ -167,9 +168,10 @@ namespace DCTLib
             return 1;
         }
 
-        private double beta()
+        //normalising value
+        private double beta
         {
-            return (1d / Width + 1d / Height);
+            get { return (1d/Width + 1d/Height); }
         }
 
     }
