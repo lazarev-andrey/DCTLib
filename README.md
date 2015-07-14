@@ -1,5 +1,5 @@
 # DCTLib
-Discrete cosine transform library for .NET, written in C#. Not per standards. Optimised for use with bitmaps.
+Discrete cosine transform library for .NET, written in C#. Optimised for use with bitmaps.
 
 # DCTFun
 ## Download
