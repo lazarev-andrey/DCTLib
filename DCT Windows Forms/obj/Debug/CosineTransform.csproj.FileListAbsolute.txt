@@ -1,0 +1,27 @@
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe.config
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\bin\Debug\CosineTransform.pdb
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csprojResolveAssemblyReference.cache
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Form1.resources
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Properties.Resources.resources
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csproj.GenerateResource.Cache
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.exe
+F:\Freelance\CosinusArchivator\CosineTransform\CosineTransform\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe.config
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\bin\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csprojResolveAssemblyReference.cache
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Form1.resources
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Properties.Resources.resources
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csproj.GenerateResource.Cache
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\CosineTransform (1)\CosineTransform\CosineTransform\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe.config
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csprojResolveAssemblyReference.cache
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Form1.resources
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Properties.Resources.resources
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.csproj.GenerateResource.Cache

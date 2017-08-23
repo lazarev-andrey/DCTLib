@@ -1,0 +1,22 @@
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe.config
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\DiscreteCosineTransform.csprojResolveAssemblyReference.cache
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Form1.resources
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.Properties.Resources.resources
+C:\Users\lazar\Documents\Visual Studio 2015\Projects\CosineTransform\CosineTransform\CosineTransform\obj\Debug\DiscreteCosineTransform.csproj.GenerateResource.Cache
+C:\Users\lazar\Documents\GitHub\DCT\CosineTransform\CosineTransform\CosineTransform\bin\Debug\CosineTransform.exe.config
+C:\Users\lazar\Documents\GitHub\DCT\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\GitHub\DCT\CosineTransform\CosineTransform\CosineTransform\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\bin\Debug\CosineTransform.exe.config
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\bin\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\bin\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\DiscreteCosineTransform.csprojResolveAssemblyReference.cache
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\CosineTransform.Properties.Resources.resources
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\DiscreteCosineTransform.csproj.GenerateResource.Cache
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\DiscreteCosineTransform.csproj.CoreCompileInputs.cache
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\CosineTransform.exe
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\CosineTransform.pdb
+C:\Users\lazar\Documents\GitHub\New folder\DCT\DCT\DCTVisualization\obj\Debug\CosineTransform.Form.resources
